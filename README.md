@@ -26,8 +26,8 @@ npm install -g angular-cli
 ### Generating and serving an Angular2 project via a development server
 
 ```javascript
-ng new helloworld
-cd helloworld
+ng new ng2-helloworld
+cd ng2-helloworld
 ng serve
 ```
 
