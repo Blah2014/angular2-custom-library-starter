@@ -19,14 +19,15 @@ How to Build Your Own Angular2 Library using angular-cli
 ### Installation
 
 ```javascript
+npm install -g gulp-install
 npm install -g angular-cli
 ```
 
 ### Generating and serving an Angular2 project via a development server
 
 ```javascript
-ng new PROJECT_NAME
-cd PROJECT_NAME
+ng new helloworld
+cd helloworld
 ng serve
 ```
 
@@ -48,16 +49,16 @@ Under "custom_library" create "tsconfig.json"
 
 ```javascript
 {
-    compilerOptions: {
-        emitDecoratorMetadata: true,
-        experimentalDecorators: true,
-        target: "es5",
-        module: "commonjs",
-        moduleResolution: "node",
-        removeComments: true,
-        sourceMap: true,
-        outDir: "../lib",
-        declaration: true
+    "compilerOptions": {
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "target": "es5",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "removeComments": true,
+        "sourceMap": true,
+        "outDir": "../lib",
+        "declaration": true
     }
 }
 ```
@@ -74,7 +75,7 @@ test command:
 git repository:
 keywords:
 author:
-license: (ISC)
+license: (ISC) MIT
 
 // Add watch and build into scripts
 "scripts": {
@@ -87,7 +88,6 @@ Copy: "dependencies" and "devDependencies" from root "package.json"
 into "custom_library/package.json"
 
 npm install
-npm install rmdir --save
 ```
 
 Under "custom_library" create 2 files:
@@ -106,14 +106,47 @@ export * from './src/helloworld.module';
 npm run build
 ```
 
+### Ready for npm
+Under "lib" create 2 files:
+
+.npmignore
+```javascript
+*
+!src
+```
+
+package.json
+```javascript
+npm init
+
+name: (custom_library) ng2-helloworld
+version: (1.0.0) 0.0.1
+description: Angular2 helloworld library
+entry point: (index.js) ng2-helloworld.js
+test command:
+git repository:
+keywords:
+author:
+license: (ISC) MIT
+```
+
 Open new cmd
 
 ```javascript
 cd lib
 npm link 
 
-cd build
+cd ../
 npm link ng2-helloworld
+
+cd ../
+ng serve
+```
+
+### Usage
+
+```javascript
+import { Ng2HelloworldModule } from 'ng2-helloworld/ng2-helloworld';
 ```
 
 Enjoy developing your custom Angular2 library :)
