@@ -149,4 +149,9 @@ ng serve
 import { Ng2HelloworldModule } from 'ng2-helloworld/ng2-helloworld';
 ```
 
+in your html add:
+```html
+<ng2-helloworld></ng2-helloworld>
+```
+
 Enjoy developing your custom Angular2 library :)
