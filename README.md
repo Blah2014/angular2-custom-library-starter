@@ -93,12 +93,14 @@ Under "custom_library" create 2 files:
 
 * ng2-helloworld.ts
 ```javascript
-export * from './src/helloworld.module';
+export * from './src/ng2-helloworld.component';
+export * from './src/ng2-helloworld.module';
 ```
 
 * ng2-helloworld.d.ts
 ```javascript
-export * from './src/helloworld.module';
+export * from './src/ng2-helloworld.component';
+export * from './src/ng2-helloworld.module';
 ```
 
 ```javascript
