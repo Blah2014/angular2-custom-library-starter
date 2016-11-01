@@ -19,7 +19,6 @@ How to Build Your Own Angular2 Library using angular-cli
 ### Installation
 
 ```javascript
-npm install -g gulp-install
 npm install -g angular-cli
 ```
 
