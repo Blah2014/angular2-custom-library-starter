@@ -153,4 +153,7 @@ in your html add:
 <ng2-helloworld></ng2-helloworld>
 ```
 
+### Final result you can view on:
+[ng2-helloworld](https://github.com/Blah2014/ng2-helloworld)
+
 Enjoy developing your custom Angular2 library :)
